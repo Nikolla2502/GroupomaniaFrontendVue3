@@ -86,20 +86,13 @@ a:hover {
     text-decoration: underline;
 }
 
-.bar {
-    display: block;
-    margin: auto;
-    background: #fd2d01;
-    height:1.5px;
-    width:80%;
-    margin-bottom:20px;
+.button--disabled {
+    background: #95a5a6 !important;
+    border: solid 1px #95a5a6 !important;
 }
-.recover{
-    font-size: 0.8rem;
-}
-.recover a{
-    font-size: 0.9rem;
-}
-.recover a:hover {
-    color: #fd2d01;
+.button--disabled:hover {
+    color:white!important;
+    box-shadow: none!important;
+    cursor: not-allowed!important;
+    ;
 }

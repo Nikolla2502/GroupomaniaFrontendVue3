@@ -8,7 +8,7 @@
             <input type="password" v-model="password.password" placeholder="Votre Mot de Passe">
             <input type="password" v-model="password.confirm" placeholder="Confirmer votre Mot de Passe">
         </form>
-          <button @click="createQccount()" class="btn_submit" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
+          <button class="btn_submit" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
 
         <!-- <router-link to='/post'><button class="btn_submit">Inscription</button></router-link> -->
 </div>
@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     validatedFields: function () {
-        if(this.pseudo !== "" && this.email !== "" && this.password.password !== "" && this.password.confirm !== ""){
+        if(this.pseudo == "" && this.email == "" && this.password.password == "" && this.password.confirm == ""){
           return true;
         } else {
           return false;
@@ -42,6 +42,4 @@ export default {
 </script>
 
 
-<style>
-
-</style>
+<style></style>
