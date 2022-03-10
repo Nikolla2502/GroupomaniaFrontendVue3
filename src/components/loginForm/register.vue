@@ -8,7 +8,7 @@
             <input type="password" v-model="password.password" placeholder="Votre Mot de Passe">
             <input type="password" v-model="password.confirm" placeholder="Confirmer votre Mot de Passe">
         </form>
-          <button @click="createQccount()" class="btn_submit" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
+          <button  class="btn_submit" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
 
         <!-- <router-link to='/post'><button class="btn_submit">Inscription</button></router-link> -->
 </div>
