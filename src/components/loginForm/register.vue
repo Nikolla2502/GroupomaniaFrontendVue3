@@ -5,7 +5,7 @@
         <form>
             <input type="text" v-model="pseudo" placeholder="Votre Pseudo">
             <input type="text" v-model="email" placeholder="Votre Email"><br>
-            <span v-if="v$.email.$error">Le mot de passe n'est pas conforme</span>
+            <span v-if="v$.email.$error">Votre adresse Email n'est pas conforme</span>
             <input type="password" v-model="password.password" placeholder="Votre Mot de Passe"><br>
             <span v-if="v$.password.password.$error">{{ v$.password.password.$errors[0].$message }}</span>
 
@@ -13,7 +13,7 @@
             <span v-if="v$.password.confirm.$error">Le mot de passe doit etre identique</span>
 
         </form>
-          <button @click="signUp()" class="btn_submit" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
+          <button @click="signUp()" class="btn_submit mt-4" :class="{'button--disabled' : !validatedFields}" >Inscription</button>
 
         <!-- <router-link to='/post'><button class="btn_submit">Inscription</button></router-link> -->
 </div>
@@ -51,7 +51,7 @@ export default {
   
   computed: {
     validatedFields: function () {
-        if(this.pseudo !== "" && this.email !== "" && this.password.password !== "" && this.password.confirm !== ""){
+        if(this.pseudo !== "" && this.email !== "" && this.password.password !== "" && this.password.confirm !== "" && this.password.confirm == this.password.password ){
           return true;
         } else {
           return false;
