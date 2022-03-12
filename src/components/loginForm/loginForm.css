@@ -67,7 +67,7 @@ h1 {
     padding-top: 0.5rem;
 }
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 form input{
     width: 85%;
@@ -75,7 +75,7 @@ form input{
     border: none;
     background: #dfe9f5;
     padding: 15px 0;
-    margin-bottom: 20px;
+    margin-top: 10px;
     border-radius: 10px;
     text-align: center;
     box-shadow: inset 2px 2px 2px 0px rgba(0,0,0,0.75);

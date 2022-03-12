@@ -9,7 +9,8 @@
 </div>
 </template>
 <script>
-import axios from 'axios';
+import instance from "/services/axiosInterceptor";
+
 import BannerPage from '../components/header.vue'
 
 export default {
@@ -25,7 +26,7 @@ export default {
     },
         methods: {
         loadProfil(){
-            axios.get('http://localhost:3000/api/user/:id') 
+            instance.get('http://localhost:3000/api/user/:id') 
                 .then(res => this.profil = res.data.profil)
                 .catch(error => this.profil = [error,{ title: "Erreur de chargement"}])
             }

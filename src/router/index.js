@@ -1,14 +1,16 @@
 
 import { createRouter, createWebHistory } from "vue-router";
 import Connexion from "@/views/connexion";
-import Post from "@/views/post";
 import Deconnexion from "@/views/deconnexion";
-import Admin from "@/views/admin";
+import Post from "@/views/post";
+
 import Profil from "@/components/profil";
+import Admin from "@/views/admin";
 
 import Edit from "@/components/post/post_edit";
 import Comment from "@/components/post/comment";
 
+import NotFound from "@/views/NotFound.vue";
 
 
 const routes = [
@@ -46,6 +48,14 @@ const routes = [
     path: "/comment",
     name: "Comment",
     component: Comment,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "404",
+    component: NotFound,
+    meta: {
+      title: "404",
+    },
   },
 ];
 
