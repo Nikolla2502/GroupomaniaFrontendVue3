@@ -65,7 +65,7 @@
                         <div>
                         <textarea 
                         class="w-100 border border-white" 
-                        v-model="message" 
+                        v-model="text" 
                         rows="5"
                         placeholder="Votre commentaire">
                         </textarea>
@@ -93,7 +93,7 @@ import BannerPage from '@/components/header.vue'
     },
     data() {
         return {
-            message: '',
+            texte: '',
             threads: [],
             
         }

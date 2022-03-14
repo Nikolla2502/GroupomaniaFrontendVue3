@@ -19,14 +19,22 @@
     </div>
 
     <div class="form-floating col-10 m-auto">
-    <b-form-textarea
+    <!-- <b-form-textarea
       class="mt-3"
       id="textarea"
       type="text"
       rows="3"
       max-rows="6"
     ></b-form-textarea>
-    <label for="textarea">Le texte de votre post</label>
+    <label for="textarea">Le texte de votre post</label> -->
+        <textarea
+      class="w-100 border border-white"  
+      id="textarea"
+      v-model="text"
+      placeholder="Votre message"
+      rows="3"
+      max-rows="6"
+    ></textarea>
     </div>
     <router-link to='/post'><button type="button" class="btn_submit mt-5 shadow-sm">Publier</button></router-link> 
   </div>
@@ -35,6 +43,12 @@
 <script>
 export default {
   name: 'PostText',
+      data() {
+        return {
+            text:'',
+         }
+
+    },
 }
 </script>
 
