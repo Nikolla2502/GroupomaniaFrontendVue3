@@ -5,26 +5,26 @@
   <section class='post mt-4 m-auto ps-0 col-8'>
     <router-link to='/post'><button class="btn_submit mt-3 shadow-sm">Retour</button></router-link>
   <ul>
-    <li v-bind:key='index' v-for="(comment, index ) in comments">
+    <li v-bind:key='index' v-for="(thread, index ) in threads">
       <section class='post__header'>
         <div class="user__name">
 
-            by {{ comment.pseudo}} <br>
-            <p class="class-text"><small class="text-muted">Date : {{ comment.date_create}}</small></p>
+            by {{ thread.pseudo}} <br>
+            <p class="class-text"><small class="text-muted">Date : {{ thread.date_create}}</small></p>
             </div>
-                <p class="post__title"> {{ comment.title }} </p>
+                <p class="post__title"> {{ thread.title }} </p>
                     </section>
-                    <div class="post__comment mb-3"> {{ comment.comment }}</div>
+                    <div class="post__comment mb-3"> {{ thread.comment }}</div>
 
                     <section class="post__footer p-3">
 
                     </section>
 
                 <ul class='comments ps-0'>
-                    <li v-bind:key='index' v-for="(comment, index ) in comments">
+                    <li >
 
-                        <p>{{ comment.date_create}} by {{ comment.pseudo }}<br>
-                        {{ comment.comment }}</p>
+                        <p>Date by Pseudo<br>
+                        Commentaire</p>
                         
                         <section class="comment__footer">
                             <div class="like__dislike">
@@ -94,7 +94,7 @@ import BannerPage from '@/components/header.vue'
     data() {
         return {
             message: '',
-            comments: [],
+            threads: [],
             
         }
 
@@ -102,8 +102,8 @@ import BannerPage from '@/components/header.vue'
     methods: {
         loadComment(){
             instance.get('http://localhost:3000/api/thread/comments')
-            .then(res => this.comments = res.data.comment)
-            .catch(error => this.comments = [error,{ title: "Erreur de chargement des commentaires"}])
+            .then(res => this.threads = res.data.thread)
+            .catch(error => this.threads = [error,{ title: "Erreur de chargement des commentaires"}])
         }
         },
 
