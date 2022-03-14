@@ -11,7 +11,7 @@
           </form>
           
           <button @click="login()" class="btn_submit mt-5" :class="{'button--disabled' : !validatedFields}" >Connexion</button>
-          <!-- <router-link to='/post'><button class="btn_submit mt-5" >Connexion</button></router-link> -->
+          <router-link to='/post'><button class="btn_submit mt-5" >Connexion</button></router-link>
 
         </div>
 </template>

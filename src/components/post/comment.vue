@@ -52,7 +52,7 @@
 
                    </li>
                     <li>
-                        <div class="form-floating m-auto">
+                        <!-- <div class="form-floating m-auto">
                         <b-form-textarea
                           class="my-3"
                           id="textarea"
@@ -61,6 +61,14 @@
                           max-rows="6"
                         ></b-form-textarea>
                         <label for="textarea" >Votre commentaire</label>
+                        </div> -->
+                        <div>
+                        <textarea 
+                        class="w-100 border border-white" 
+                        v-model="message" 
+                        rows="5"
+                        placeholder="Votre commentaire">
+                        </textarea>
                         </div>
                         <router-link to='/post'><button type="button" class="btn_submit mt-3 shadow-sm">Publier</button></router-link> 
                     </li>
@@ -85,7 +93,7 @@ import BannerPage from '@/components/header.vue'
     },
     data() {
         return {
-
+            message: '',
             comments: [],
             
         }
